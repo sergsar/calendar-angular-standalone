@@ -1,0 +1,47 @@
+:host {
+  display: block;
+  height: 100%;
+  padding: 10px;
+}
+
+table {
+  table-layout: fixed;
+  margin: 0;
+  height: calc(100% - 62px);
+}
+
+td {
+  padding: 3px 3px 20px;
+}
+
+tr:not(:first-child) {
+  height: calc(20vh - 32px);
+}
+
+tr:first-child > th {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+td:not(:last-child),
+th:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+tr:first-child {
+  height: 20px;
+}
+
+div {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.desc {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 16px;
+}

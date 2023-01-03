@@ -1,0 +1,7 @@
+{
+  "dest": "../../../dist/demo-tools/calendar-app",
+  "lib": {
+    "entryFile": "index.ts"
+  },
+  "assets": ["assets"]
+}

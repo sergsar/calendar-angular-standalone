@@ -1,0 +1,51 @@
+<mat-icon
+  svgIcon="caret-down"
+  (click)="toggleDropdown(true, $event)"
+></mat-icon>
+<div
+  *ngIf="showDropdown"
+  class="dropdown bottom-left"
+  [ngClass]="dropdownStyle()"
+  (click)="$event.stopPropagation()"
+>
+  <div class="dropdown-menu">
+    <h4 class="dropdown-header">Background color</h4>
+    <button
+      #firstButton
+      type="button"
+      class="dropdown-item"
+      (blur)="toggleDropdown(false)"
+      (mousedown)="changed.next(''); toggleDropdown(false)"
+    >
+      Grey
+    </button>
+    <button
+      type="button"
+      class="dropdown-item"
+      (mousedown)="changed.next('red')"
+    >
+      Red
+    </button>
+    <button
+      type="button"
+      class="dropdown-item"
+      (mousedown)="changed.next('blue')"
+    >
+      Blue
+    </button>
+    <button
+      type="button"
+      class="dropdown-item"
+      (mousedown)="changed.next('yellow')"
+    >
+      Yellow
+    </button>
+    <button
+      type="button"
+      class="dropdown-item"
+      (mousedown)="changed.next('green')"
+    >
+      Green
+    </button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+mat-icon {
+  opacity: 0.5;
+}
+
+mat-icon:hover {
+  opacity: 1;
+}
+
+.dropdown-menu {
+  display: flex;
+  gap: 4px;
+}

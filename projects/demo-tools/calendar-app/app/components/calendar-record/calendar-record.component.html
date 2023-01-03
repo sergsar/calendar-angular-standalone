@@ -1,0 +1,21 @@
+<ng-container *ngIf="control">
+  <div
+    (click)="setSelected(true)"
+    *ngIf="!isSelected"
+    [ngClass]="control.value.color"
+    class="record"
+  >
+    {{ control.value.text }}
+    <app-calendar-dropdown
+      (changed)="control.patchValue({ color: $event })"
+    ></app-calendar-dropdown>
+  </div>
+
+  <textarea
+    #textArea
+    *ngIf="isSelected"
+    [formControl]="getControl('text')"
+    (keydown)="onKeyDown($event)"
+    (blur)="setSelected(false)"
+  ></textarea>
+</ng-container>

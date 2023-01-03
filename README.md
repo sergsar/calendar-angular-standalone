@@ -1,4 +1,17 @@
-# CalendarAngularStandalone
+# Calendar Angular Standalone
+
+A simple Calendar App example with Angular CDK Drag & Drop feature
+
+The app based on new Angular Standalone principals without modules declaration  
+and implemented as separate Angular module generated with ng-packagr
+
+In the library you can find examples how to embed assets icons and styles,   
+use Angular Material svg icons,
+nested routes and secondary entry points
+
+For code quality and styling purposes the project has eslint + prettier setup
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 

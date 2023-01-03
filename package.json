@@ -7,15 +7,21 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "build:calendar-app": "npm run compile:styles && ng build @demo-tools/calendar-app --configuration production",
+    "compile:styles": "sass --no-source-map projects/demo-tools/calendar-app/styles/index.scss projects/demo-tools/calendar-app/assets/styles/index.css",
+    "lint": "ng lint",
+    "lint:fix": "ng lint --quiet --fix",
+    "format": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write && npx prettier 'projects/**/*.{js,jsx,ts,tsx,html,css,scss}' --write"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.0.0",
+    "@angular/cdk": "^15.0.3",
     "@angular/common": "^15.0.0",
     "@angular/compiler": "^15.0.0",
     "@angular/core": "^15.0.0",
     "@angular/forms": "^15.0.0",
+    "@angular/material": "^15.0.3",
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
@@ -44,6 +50,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^15.0.3",
     "prettier": "^2.8.1",
     "typescript": "~4.8.2"
   }

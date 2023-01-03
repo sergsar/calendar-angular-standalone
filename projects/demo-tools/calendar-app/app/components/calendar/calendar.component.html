@@ -1,0 +1,34 @@
+<table class="table table-compact">
+  <tbody cdkDropListGroup>
+    <tr>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+    <tr *ngFor="let week of weeks">
+      <td
+        class="left"
+        *ngFor="let day of days"
+        cdkDropList
+        [cdkDropListData]="recordControls[week][day]"
+        (click)="createNewRecord(day, week)"
+        (cdkDropListDropped)="dropItem($event)"
+      >
+        <div>{{ dates[week][day] }}</div>
+        <app-calendar-record
+          cdkDrag
+          cdkDragHandle
+          *ngFor="let control of recordControls[week][day]"
+          [control]="control"
+          (delete)="deleteRecord(day, week, control)"
+          (click)="$event.stopPropagation()"
+          >DragItem</app-calendar-record
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

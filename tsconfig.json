@@ -22,7 +22,11 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@demo-tools/calendar-app": ["projects/demo-tools/calendar-app"],
+      "@demo-tools/calendar-app/*": ["projects/demo-tools/calendar-app/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
