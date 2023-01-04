@@ -4,14 +4,18 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /calendar-angular-standalone/ --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "build:all": "npm run build:libs && npm run build",
+    "build:libs": "npm run build:calendar-app",
     "build:calendar-app": "npm run compile:styles && ng build @demo-tools/calendar-app --configuration production",
     "compile:styles": "sass --no-source-map projects/demo-tools/calendar-app/styles/index.scss projects/demo-tools/calendar-app/assets/styles/index.css",
     "lint": "ng lint",
     "lint:fix": "ng lint --quiet --fix",
-    "format": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write && npx prettier 'projects/**/*.{js,jsx,ts,tsx,html,css,scss}' --write"
+    "format": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write && npx prettier 'projects/**/*.{js,jsx,ts,tsx,html,css,scss}' --write",
+    "predeploy": "npm run build -- --output-path build",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +48,7 @@
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^4.0.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

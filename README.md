@@ -7,11 +7,14 @@ and implemented as separate Angular module generated with ng-packagr
 
 In the library you can find examples how to embed assets icons and styles,   
 use Angular Material svg icons,
-nested routes and secondary entry points
+imports secondary entry points,
+nested routes with hash
 
 For code quality and styling purposes the project has eslint + prettier setup
 
+[Demo](https://sergsar.github.io/calendar-angular-standalone)
 
+![<img alt="screenshot" width="200" src="images/app-screenshot.png" />](images/app-screenshot.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
